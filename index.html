@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Magic Menu Indicator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="navigation">
+        <ul>
+            <li class="list active">
+                <a href="#">
+                    <span class="icon"><ion-icon name="wifi-outline"></ion-icon></span>
+                    <!-- 4G below -->
+                    <!-- <ion-icon name="swap-vertical-outline"></ion-icon> -->
+                    <!-- Ethernet below-->
+                    <!-- <ion-icon name="tv-outline"></ion-icon> -->
+                    <span class="text">Wi-Fi</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="cellular-outline"></ion-icon></span>
+                    <span class="text">Viettel</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="paper-plane-outline"></ion-icon></span>
+                    <span class="text">Direct</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="bluetooth-outline"></ion-icon></span>
+                    <span class="text">Headsets</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="battery-half-outline"></ion-icon></span>
+                    <!-- 0% below -->
+                    <!-- <ion-icon name="battery-dead-outline"></ion-icon> -->
+                    <!-- 100? below -->
+                    <!-- <ion-icon name="battery-dead-outline"></ion-icon>                     -->
+                    <span class="text">50%</span>
+                </a>
+            </li>
+            <div class="indicator"></div>
+        </ul>
+    </div>
+
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item) =>
+        item.addEventListener('click',activeLink))
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
